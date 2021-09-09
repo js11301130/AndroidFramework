@@ -8,10 +8,10 @@
   </Module>
 
   <!--仪器设备模块-->
-  <Module Script="InstrumentUnitData"  Name="仪器设备">
-    <Item Name="设备01"  Target="对象001" ViewID="View_001"  Audio="" Content="使用铲运机和铁锹把施工现场地面修正平"/>
-    <Item Name="设备02"  Target="对象002" ViewID="View_002"  Audio="" Content="使用铲运机和铁锹把施工现场地面修正平"/>
-    <Item Name="设备03"  Target="对象003" ViewID="View_003"  Audio="" Content="使用铲运机和铁锹把施工现场地面修正平"/>
+  <Module Script="InstrumentUnitData"  Name="实验器材">
+    <Item Name="设备01"  Target="对象001" ViewID="View_001"  Audio="001" Content="使用铲运机和铁锹把施工现场地面修正平2"/>
+    <Item Name="设备02"  Target="对象002" ViewID="View_002"  Audio="002" Content="使用铲运机和铁锹把施工现场地面修正平3"/>
+    <Item Name="设备03"  Target="对象003" ViewID="View_003"  Audio="003" Content="使用铲运机和铁锹把施工现场地面修正平4"/>
   </Module>
 
   <!--实验方法模块-->

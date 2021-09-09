@@ -51,11 +51,7 @@ namespace ETHotfix
         }
         public virtual void StartOperate()
         {
-            if (!UIOperateStepWindowComponent.IsStepOperateWindowOpen)
-            {
-                return;
-            }
-            if (!string.IsNullOrEmpty(TipInfo))
+             if (!string.IsNullOrEmpty(TipInfo))
             {
                 MessageBoxHelper.ShowMessage(TipInfo, confirmPanelType: ConfirmPanelType.EventType);
             }
@@ -87,6 +83,11 @@ namespace ETHotfix
 
         private void StartOperateHandle(UnityEngine.EventSystems.PointerEventData pointerEventData)
         {
+            if (!UIOperateStepWindowComponent.IsStepOperateWindowOpen)
+            {
+                return;
+            }
+
             if (ProjectConfigComponent.Instance.CurrentStep == DataInfo.OperateInfo.Index)
             {
                 Game.EventSystem.Run(EventIdType.CloseHightlightEvent);

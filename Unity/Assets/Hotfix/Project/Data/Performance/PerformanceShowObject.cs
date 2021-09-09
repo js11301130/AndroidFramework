@@ -20,7 +20,7 @@ namespace ETHotfix
         {
             _target = SceneUnitHelper.Get(TargetID);
             yield return null;
-            if (bool.Parse(HideOnAwake))
+             if (bool.Parse(HideOnAwake))
             {
                 _target?.SetActive(false);
             }
@@ -34,7 +34,10 @@ namespace ETHotfix
         public override void Reset()
         {
             _target = GetTarget();
-            _target.SetActive(false);
+            if (bool.Parse(HideOnAwake))
+            {
+                _target?.SetActive(false);
+            }
         }
 
         public override IEnumerator StartExecute()

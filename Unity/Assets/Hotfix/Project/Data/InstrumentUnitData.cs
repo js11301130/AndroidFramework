@@ -45,7 +45,7 @@ namespace ETHotfix
 
         public string Content;
 
-        public AudioClip Audio;
+        public string Audio;
  
     }
 }

@@ -30,7 +30,6 @@ namespace ETHotfix
                 {
                     InfoText.text = item.Content;
                     Info.UpdateSize();
-                    UnityEngine.Debug.Log("Display");
                 };
             }
             base.Show();

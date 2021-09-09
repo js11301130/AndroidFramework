@@ -22,6 +22,17 @@ namespace ETHotfix
                 }
                 Game.EventSystem.Run(EventIdType.StartMissionEvent, index);
               });
+
+            NextStep.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                var index = StartMissionEvent.CurrentStepIndex + 1;
+                var count = Game.Scene.GetComponent<ProjectConfigComponent>().TryGetAllMission().Count;
+                if (index >count)
+                {
+                    index = count;
+                }
+                Game.EventSystem.Run(EventIdType.StartMissionEvent, index);
+            });
             Reset.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Game.EventSystem.Run(EventIdType.CloseHightlightEvent);

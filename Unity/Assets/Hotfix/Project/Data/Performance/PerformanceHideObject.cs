@@ -26,6 +26,7 @@ namespace ETHotfix
         {
             _target = SceneUnitHelper.Get(TargetID);
             yield return null;
+
             if (bool.Parse(HideOnAwake))
             {
                 _target?.SetActive(false);

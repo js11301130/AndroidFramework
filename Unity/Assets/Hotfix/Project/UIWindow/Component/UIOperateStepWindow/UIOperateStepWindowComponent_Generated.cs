@@ -29,6 +29,8 @@ namespace ETHotfix
 
 		private UnityEngine.UI.Outline Reset;
 
+		private UnityEngine.UI.Button NextStep;
+
 		public void Awake()
 		{
 			var go = GetParent<UI>().GameObject;
@@ -46,6 +48,8 @@ namespace ETHotfix
 			LastStep=Collector.GetMonoComponent<UnityEngine.UI.Outline>("LastStep");
 
 			Reset=Collector.GetMonoComponent<UnityEngine.UI.Outline>("Reset");
+
+			NextStep=Collector.GetMonoComponent<UnityEngine.UI.Button>("NextStep");
 
 			this.RegisterEvent();
 		}

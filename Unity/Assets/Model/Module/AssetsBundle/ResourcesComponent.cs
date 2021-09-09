@@ -369,11 +369,12 @@ namespace ETModel
             }
             else
             {
-                p = Path.Combine(Application.streamingAssetsPath + "/" + ETModel.Global.LoadProjectName, assetBundleName);
+                p = "jar:file://" + Application.dataPath + "!/assets" + "/" + assetBundleName;
+                Debug.Log(File.Exists(p));
                 byte[] bytes = AES.AESFileByteDecrypt(p, AES.EncryptKey);
                 assetBundle = AssetBundle.LoadFromMemory(bytes);
             }
-            if (assetBundle == null)
+             if (assetBundle == null)
             {
                 throw new Exception($"assets bundle not found: {assetBundleName}");
             }

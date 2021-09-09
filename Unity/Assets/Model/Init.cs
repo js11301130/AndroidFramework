@@ -28,8 +28,9 @@ namespace ETModel
         [Sirenix.OdinInspector.LabelText("项目名称")]
         public string LoadProjectName;
 
-        private void Awake()
+        private async void Awake()
         {
+            await Task.Delay(3000);
             Instance = this;
             var configData = JsonMapper.ToObject<ConfigData>(AssetsBundleDownloader.LoadFile("Config.txt"));
             var ip = configData.ConfigDic["AssetbundleUrl"];
@@ -132,6 +133,7 @@ namespace ETModel
                     return;
                 }
                 timeCount = Time.time;
+                Debug.Log(Target);
                 LoadHotFix(Target);
                 await Task.Delay(100);
 
